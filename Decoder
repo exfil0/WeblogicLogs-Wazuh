@@ -20,19 +20,3 @@
       </match>
     </decoder>
   </decoder>
-
-<!-- Rule to detect critical errors in WebLogic logs -->
-<rule id="100100" level="10">
-  <if_sid>100</if_sid>
-  <field name="program_name">weblogic</field>
-  <field name="message">.*CRITICAL.*</field>
-  <description>Critical error detected in WebLogic logs</description>
-</rule>
-
-<!-- Rule to detect high-severity errors in WebLogic logs -->
-<rule id="100101" level="7">
-  <if_sid>100</if_sid>
-  <field name="program_name">weblogic</field>
-  <field name="message">.*ERROR.*</field>
-  <description>High-severity error detected in WebLogic logs</description>
-</rule>
